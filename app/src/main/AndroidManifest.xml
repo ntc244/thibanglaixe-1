@@ -21,6 +21,7 @@
         </activity>
         <activity android:name="ui.activityImpl.FinesActivityImpl"
             android:parentActivityName="ui.MainActivity"/>
+ok
     </application>
 
 </manifest>
