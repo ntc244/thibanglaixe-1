@@ -12,32 +12,32 @@ import com.example.myapplication.R;
 
 import java.util.List;
 
-import model.Fines;
+import model.TrafficSigns;
 
-public class FinesAdapter extends ArrayAdapter<Fines> {
+public class TrafficSignsAdapter extends ArrayAdapter<TrafficSigns> {
     private Activity activity;
     private int resource;
-    private List<Fines> fines;
+    private List<TrafficSigns> trafficSigns;
 
-    public FinesAdapter(@NonNull Activity context, int resource, @NonNull List<Fines> fines) {
-        super(context, resource, fines);
+    public TrafficSignsAdapter(@NonNull Activity context, int resource, @NonNull List<TrafficSigns> trafficSigns) {
+        super(context, resource, trafficSigns);
         this.activity = context;
         this.resource = resource;
-        this.fines = fines;
+        this.trafficSigns = trafficSigns;
     }
 
 
     @Override
     public int getCount() {
-        if (fines == null){
+        if (trafficSigns == null){
             return 0;
         }
-        return fines.size();
+        return trafficSigns.size();
     }
 
     @Override
-    public Fines getItem(int position) {
-        return fines.get(position);
+    public TrafficSigns getItem(int position) {
+        return trafficSigns.get(position);
     }
 
     @Override
@@ -54,10 +54,10 @@ public class FinesAdapter extends ArrayAdapter<Fines> {
         view = inflater.inflate(this.resource, null);
 
         // Đặt chữ cho từng view trong danh sách.
-        TextView txtContent = (TextView) view.findViewById(R.id.txtId);
-        txtContent.setText(fines.get(position).getContent());
-        TextView txtMulct = (TextView) view.findViewById(R.id.txtMulct);
-        txtMulct.setText(fines.get(position).getMulct());
+        TextView txtContent = (TextView) view.findViewById(R.id.txtIdTraffic);
+        txtContent.setText(trafficSigns.get(position).getId());
+        TextView txtMulct = (TextView) view.findViewById(R.id.txtContentTraffic);
+        txtMulct.setText(trafficSigns.get(position).getContent());
 
 
         // Trả về view kết quả.

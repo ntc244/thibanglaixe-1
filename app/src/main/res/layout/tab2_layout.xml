@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kinh nghiệm thi"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtKN1"/>
+            <!--android:text="1. Đầu tiên bạn dừng xe trước vạch xuất phát và chờ hiệu lệnh bắt đầu bài thi. Khi vào trong sa hình vòng số 8 thì lưu ý điều khiển bánh trước chạy áp sát mép ngoài của vòng số 8 khoảng 5 đến 10cm để đảm bảo cho bánh sau được nằm gọn trong vòng số 8. Làm như vậy khi ôm cua bánh xe không bị vượt ra ngoài vòng."/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtKN2"/>
+            <!--android:text="2. Khi ôm cua hãy giữ vững tay lái, loạng choạng hay lắc lư tay rất dễ dẫ đến mất điều khiển xe và cán vạch."-->
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtKN3"/>
+            <!--android:text="3. Giữa số 2 và số 3, số nào ổn định nhất thì bạn đi. Đừng đi số 1 vì máy sẽ rất bốc nếu lỡ tay quá ga xe sẽ lao ngay ra khỏi vòng. Với số 4 máy quá yếu nên khi đi qua khúc cua, xe không đủ tốc độ làm chết máy và bạn sẽ phải chống chân."-->
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtKN4"/>
+            <!--android:text="4. Hãy chú ý để chạy đúng hướng vòng số 8 và chạy đủ 1,5 vòng. Có rất nhiều trường hợp bị trượt do chỉ chạy nửa vòng đầu rồi sau đó chạy nhầm hướng. Hoặc chạy chưa đủ vòng mà đã vào lối ra cho bài thi số 2."-->
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txtKN5"/>
+        </LinearLayout>
+    </ScrollView>
+
+        <!--android:text="5. Nếu các bạn không tập trung được để nhìn hình thì hãy nhớ trong đầu là khi đến cửa thi vòng số 8 thì chạy theo chiều sau: rẽ phải -> rẽ trái -> rẽ phải -> rẽ trái -> rẽ phải. Chạy đủ 5 bước này là kết thúc bài thi vòng số 8 với đủ só lượng 1,5 vòng. Ở lần rẽ phải cuối cùng, bạn sẽ đến bài thi số 2. "-->
+        />
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/lvKinhNghiem"-->
+        <!--android:fadeScrollbars="true"></ListView>-->
+</LinearLayout>
