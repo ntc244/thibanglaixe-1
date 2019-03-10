@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.example.myapplication.R;
 
 import ui.activityImpl.FinesActivityImpl;
+import ui.activityImpl.LyThuyetActivityImpl;
 import ui.activityImpl.SaHinhActivityImpl;
 import ui.activityImpl.ThucHanhActivityImpl;
 import ui.activityImpl.TrafficSignsActivityImpl;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnHocBienBao = findViewById(R.id.btnHocBienBao);
         btnThucHanh = findViewById(R.id.btnThuchanh);
 
+        //set intent
         btnFines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnLyThuyet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), LyThuyetActivityImpl.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

@@ -7,17 +7,17 @@ import presenter.QuestionPresenter;
 import service.QuestionService;
 import serviceCallback.ListDataCallback;
 import serviceImpl.QuestionServiceImpl;
-import ui.activityImpl.SaHinhActivityImpl;
+import ui.activity.BaseQuestionActivity;
 
 public class QuestionPresenterImpl implements QuestionPresenter {
 
 
 //    private QuestionActivityImpl view;
-    private SaHinhActivityImpl view;
+    private BaseQuestionActivity view;
     private QuestionService questionService;
     private List<Question> questions;
 
-    public QuestionPresenterImpl(SaHinhActivityImpl view) {
+    public QuestionPresenterImpl(BaseQuestionActivity view) {
         this.view = view;
         this.questionService = QuestionServiceImpl.getInstance();
     }

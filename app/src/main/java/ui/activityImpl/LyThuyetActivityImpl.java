@@ -23,7 +23,7 @@ import presenterImpl.QuestionPresenterImpl;
 import ui.activity.BaseQuestionActivity;
 import ui.fragmentImpl.QuestionFragmentImpl;
 
-public class SaHinhActivityImpl extends AppCompatActivity implements BaseQuestionActivity {
+public class LyThuyetActivityImpl extends AppCompatActivity implements BaseQuestionActivity {
 
 
     private ViewPager viewPager;
@@ -34,21 +34,22 @@ public class SaHinhActivityImpl extends AppCompatActivity implements BaseQuestio
     private QuestionPresenter questionPresenter;
     private CustomPagerAdapter pagerAdapter;
 
-    private static final String task = "sa_hinh";
+    private static final String task = "ly_thuyet";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.sa_hinh_activity);
+        setContentView(R.layout.ly_thuyet_activity);
 
-        questionPresenter = new QuestionPresenterImpl(SaHinhActivityImpl.this);
+        questionPresenter = new QuestionPresenterImpl(LyThuyetActivityImpl.this);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Ôn câu sa hình");
+        actionBar.setTitle("Ôn câu lý thuyết");
         actionBar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.toolbar2)));
-        viewPager = findViewById(R.id.vpSaHinh);
+        viewPager = findViewById(R.id.vpLyThuyet);
         FragmentManager manager = getSupportFragmentManager();
         pagerAdapter = new CustomPagerAdapter(manager);
         //CustomPagerAdapter pagerAdapter=new CustomPagerAdapter(manager,fragments);

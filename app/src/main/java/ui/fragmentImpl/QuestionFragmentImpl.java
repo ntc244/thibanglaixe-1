@@ -39,6 +39,7 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
     private int macauhoi;
     private Question question;
     private String isTest;
+    private String task;
     private boolean isRightAnswer;
     private byte[] imgsrc;
     private int position;
@@ -62,11 +63,12 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         addEvents();
     }
 
-    public static QuestionFragmentImpl getInstance(Question question, String isTest) {
+    public static QuestionFragmentImpl getInstance(Question question, String isTest, String task) {
         QuestionFragmentImpl myFragment = new QuestionFragmentImpl();
         myFragment.question = question;
         myFragment.macauhoi = question.getId();
         myFragment.isTest = isTest;
+        myFragment.task = task;
         return myFragment;
     }
 
@@ -126,6 +128,16 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
     public void hienThiAnswer() {
         // Load list cau hoi
 
+        //Hiển thị hoặc ẩn ảnh biển báo/sa hình
+        if(task.equals("sa_hinh")){
+            // TO-DO
+//            imgsrc=cursorCH.getBlob(4);
+//            Bitmap bitmap= BitmapFactory.decodeByteArray(imgsrc,0,imgsrc.length);
+//            imgHinhCauHoi.setImageBitmap(bitmap);
+        }
+        else {
+            imgHinhCauHoi.setVisibility(View.GONE);
+        }
 //        listAnswer.clear();
         txtCauHoi.setText(question.getContent());
 

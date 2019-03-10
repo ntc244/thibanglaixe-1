@@ -32,7 +32,8 @@
             android:parentActivityName="ui.MainActivity"/>
         <activity android:name="ui.activityImpl.SaHinhActivityImpl"
             android:parentActivityName="ui.MainActivity"/>
-
+        <activity android:name="ui.activityImpl.LyThuyetActivityImpl"
+            android:parentActivityName="ui.MainActivity"/>
 
     </application>
 
