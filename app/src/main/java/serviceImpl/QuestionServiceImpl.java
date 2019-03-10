@@ -33,9 +33,9 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public void getListQuestion(final ListDataCallback<Question> callback, String task) {
+    public void getListQuestion(final ListDataCallback<Question> callback, String task, String idDe) {
 
-        questionAPI.getListQuestion(task).enqueue(new Callback<List<Question>>() {
+        questionAPI.getListQuestion(task, idDe).enqueue(new Callback<List<Question>>() {
             @Override
             public void onResponse(Call<List<Question>> call, Response<List<Question>> response) {
                 if (response.isSuccessful()) {

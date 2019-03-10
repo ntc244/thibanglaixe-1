@@ -34,6 +34,12 @@
             android:parentActivityName="ui.MainActivity"/>
         <activity android:name="ui.activityImpl.LyThuyetActivityImpl"
             android:parentActivityName="ui.MainActivity"/>
+        <activity android:name="ui.activityImpl.TopicActivityImpl"
+            android:parentActivityName="ui.MainActivity"/>
+        <activity android:name="ui.activityImpl.TestExamActivityImpl"
+            android:parentActivityName="ui.activityImpl.TopicActivityImpl"/>
+        <activity android:name="ui.activityImpl.ResultTestExamActivityImpl"
+            />
 
     </application>
 

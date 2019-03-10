@@ -2,12 +2,12 @@ package api;
 
 import java.util.List;
 
-import model.Question;
+import model.Topic;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface QuestionAPI {
+public interface TopicAPI {
     @GET("/API_giaothong/api.php")
-    Call<List<Question>> getListQuestion(@Query("task") String task, @Query("id_de") String idDe);
+    Call<List<Topic>> getListTopic(@Query("task") String task);
 }

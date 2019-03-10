@@ -129,13 +129,12 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         // Load list cau hoi
 
         //Hiển thị hoặc ẩn ảnh biển báo/sa hình
-        if(task.equals("sa_hinh")){
+        if (task.equals("sa_hinh")) {
             // TO-DO
 //            imgsrc=cursorCH.getBlob(4);
 //            Bitmap bitmap= BitmapFactory.decodeByteArray(imgsrc,0,imgsrc.length);
 //            imgHinhCauHoi.setImageBitmap(bitmap);
-        }
-        else {
+        } else {
             imgHinhCauHoi.setVisibility(View.GONE);
         }
 //        listAnswer.clear();

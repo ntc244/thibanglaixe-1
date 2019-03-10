@@ -56,7 +56,7 @@ public class LyThuyetActivityImpl extends AppCompatActivity implements BaseQuest
         viewPager.setAdapter(pagerAdapter);
         fragments.add(new QuestionFragmentImpl());
 
-        questionPresenter.getListQuestion(task);
+        questionPresenter.getListQuestion(task, "");
         fragments.clear();
     }
 

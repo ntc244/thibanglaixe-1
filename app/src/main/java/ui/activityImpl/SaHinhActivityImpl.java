@@ -48,14 +48,17 @@ public class SaHinhActivityImpl extends AppCompatActivity implements BaseQuestio
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Ôn câu sa hình");
         actionBar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.toolbar2)));
+
         viewPager = findViewById(R.id.vpSaHinh);
+
         FragmentManager manager = getSupportFragmentManager();
         pagerAdapter = new CustomPagerAdapter(manager);
+
         //CustomPagerAdapter pagerAdapter=new CustomPagerAdapter(manager,fragments);
         viewPager.setAdapter(pagerAdapter);
         fragments.add(new QuestionFragmentImpl());
 
-        questionPresenter.getListQuestion(task);
+        questionPresenter.getListQuestion(task, "");
         fragments.clear();
     }
 

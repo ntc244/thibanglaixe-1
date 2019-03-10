@@ -15,6 +15,7 @@ import ui.activityImpl.FinesActivityImpl;
 import ui.activityImpl.LyThuyetActivityImpl;
 import ui.activityImpl.SaHinhActivityImpl;
 import ui.activityImpl.ThucHanhActivityImpl;
+import ui.activityImpl.TopicActivityImpl;
 import ui.activityImpl.TrafficSignsActivityImpl;
 
 public class MainActivity extends AppCompatActivity {
@@ -77,7 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        btnThiThu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), TopicActivityImpl.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

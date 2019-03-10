@@ -14,11 +14,13 @@ import ui.fragmentImpl.QuestionFragmentImpl;
  */
 
 public class CustomPagerAdapter extends FragmentStatePagerAdapter {
-    private ArrayList<QuestionFragmentImpl> fragments=new ArrayList<>();
+
+    private ArrayList<QuestionFragmentImpl> fragments = new ArrayList<>();
     private final List<String> titles = new ArrayList<>();
+
     public CustomPagerAdapter(FragmentManager fm) {
         super(fm);
-       // this.fragments=fragments;
+        // this.fragments=fragments;
     }
 //    public CustomPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
 //        super(fm);
@@ -37,12 +39,13 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return fragments.size() ;
+        return fragments.size();
     }
+
     public void addFragment(QuestionFragmentImpl fragment, String title) {
         fragments.add(fragment);
         titles.add(title);
-}
+    }
 
     @Override
     public CharSequence getPageTitle(int position) {

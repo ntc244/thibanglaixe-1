@@ -23,7 +23,7 @@ public class QuestionPresenterImpl implements QuestionPresenter {
     }
     
     @Override
-    public void getListQuestion(String task) {
+    public void getListQuestion(String task, String idDe) {
         questionService.getListQuestion(new ListDataCallback<Question>() {
             @Override
             public void onSuccess(List<Question> data) {
@@ -36,7 +36,7 @@ public class QuestionPresenterImpl implements QuestionPresenter {
             public void onFail(String error) {
 
             }
-        }, task);
+        }, task, idDe);
 //        return questions;
     }
 }
