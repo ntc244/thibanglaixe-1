@@ -132,10 +132,6 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
 
         //Hiển thị hoặc ẩn ảnh biển báo/sa hình
         if (task.equals("sa_hinh")) {
-            // TO-DO
-//            imgsrc=cursorCH.getBlob(4);
-//            Bitmap bitmap= BitmapFactory.decodeByteArray(imgsrc,0,imgsrc.length);
-//            imgHinhCauHoi.setImageBitmap(bitmap);
             Picasso.with(QuestionFragmentImpl.this.getContext()).load("http://songmoi.vn/public/upload_editor/posts/images/angry-husky-christmas-6.jpg")
                     .placeholder(R.mipmap.ic_launcher)
                     .error(R.mipmap.ic_launcher)

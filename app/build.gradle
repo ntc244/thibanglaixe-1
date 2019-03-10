@@ -55,7 +55,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
     //alert
     implementation 'com.tapadoo.android:alerter:2.0.4'
-    // https://mvnrepository.com/artifact/com.squareup.picasso/picasso
+    //picasso
     implementation group: 'com.squareup.picasso', name: 'picasso', version: '2.5.2'
 
 }
