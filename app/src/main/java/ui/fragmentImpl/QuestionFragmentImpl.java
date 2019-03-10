@@ -14,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -134,6 +136,20 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
 //            imgsrc=cursorCH.getBlob(4);
 //            Bitmap bitmap= BitmapFactory.decodeByteArray(imgsrc,0,imgsrc.length);
 //            imgHinhCauHoi.setImageBitmap(bitmap);
+            Picasso.with(QuestionFragmentImpl.this.getContext()).load("http://songmoi.vn/public/upload_editor/posts/images/angry-husky-christmas-6.jpg")
+                    .placeholder(R.mipmap.ic_launcher)
+                    .error(R.mipmap.ic_launcher)
+                    .into(imgHinhCauHoi, new Callback() {
+                        @Override
+                        public void onSuccess() {
+
+                        }
+
+                        @Override
+                        public void onError() {
+
+                        }
+                    });
         } else {
             imgHinhCauHoi.setVisibility(View.GONE);
         }
