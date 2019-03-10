@@ -20,10 +20,10 @@ import adapter.CustomPagerAdapter;
 import model.Question;
 import presenter.QuestionPresenter;
 import presenterImpl.QuestionPresenterImpl;
-import ui.activity.SaHinhActivity;
+import ui.activity.BaseQuestionActivity;
 import ui.fragmentImpl.QuestionFragmentImpl;
 
-public class SaHinhActivityImpl extends AppCompatActivity implements SaHinhActivity {
+public class SaHinhActivityImpl extends AppCompatActivity implements BaseQuestionActivity {
 
 
     private ViewPager viewPager;

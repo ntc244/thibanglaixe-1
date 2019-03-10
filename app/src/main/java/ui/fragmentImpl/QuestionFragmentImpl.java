@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import adapter.AnswerAdapter;
@@ -125,11 +126,12 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
     public void hienThiAnswer() {
         // Load list cau hoi
 
-        listAnswer.clear();
+//        listAnswer.clear();
         txtCauHoi.setText(question.getContent());
 
         // Load list đáp án
         listAnswer = question.getDapAn();
+        Collections.shuffle(listAnswer);
 
 
         dapAnAdapter = new AnswerAdapter(QuestionFragmentImpl.this.getActivity(), R.layout.answer_item, listAnswer);
@@ -145,7 +147,6 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
             txtMaCauHoi.setText("Câu " + macauhoi + "");
         }
 
-        listAnswer.clear();
     }
 
     @Override

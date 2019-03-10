@@ -6,7 +6,7 @@ import java.util.List;
 
 import model.Question;
 
-public interface SaHinhActivity {
+public interface BaseQuestionActivity {
     boolean onOptionsItemSelected(MenuItem item);
 
     void setListQuestion(List<Question> questions);
