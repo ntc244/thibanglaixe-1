@@ -1,7 +1,6 @@
 package utils;
 
 public class Constant {
-    public static final String BOOK = "truyen";
     public static class RETROFIT {
         public static final String BASE_URL = "http://songchung.vn/";
         public static final int READ_TIME_OUT = 100;
