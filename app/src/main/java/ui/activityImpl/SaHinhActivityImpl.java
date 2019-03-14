@@ -77,7 +77,7 @@ public class SaHinhActivityImpl extends AppCompatActivity implements BaseQuestio
         for (int i = 0; i < questions.size(); i++) {
             int maCauHoi = questions.get(i).getId();
             String title = "Câu " + maCauHoi;
-            pagerAdapter.addFragment(QuestionFragmentImpl.getInstance(questions.get(i), "False", task), title);
+            pagerAdapter.addFragment(QuestionFragmentImpl.getInstance(i+1, questions.get(i), "False", task), title);
         }
         pagerAdapter.notifyDataSetChanged();
     }

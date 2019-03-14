@@ -65,10 +65,10 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         addEvents();
     }
 
-    public static QuestionFragmentImpl getInstance(Question question, String isTest, String task) {
+    public static QuestionFragmentImpl getInstance(int index, Question question, String isTest, String task) {
         QuestionFragmentImpl myFragment = new QuestionFragmentImpl();
         myFragment.question = question;
-        myFragment.macauhoi = question.getId();
+        myFragment.macauhoi = index;
         myFragment.isTest = isTest;
         myFragment.task = task;
         return myFragment;
