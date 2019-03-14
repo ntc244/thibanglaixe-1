@@ -55,7 +55,7 @@ public class TopicAdapter extends ArrayAdapter<Topic> {
 
         // Đặt chữ cho từng view trong danh sách.
         TextView txtContent = (TextView) view.findViewById(R.id.txtTopicId);
-        txtContent.setText("Đề số " + topic.get(position).getId());
+        txtContent.setText("Đề " + topic.get(position).getId());
 
         // Trả về view kết quả.
         return view;

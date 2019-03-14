@@ -24,6 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/rounded_textview"
         android:text="txtAnswer"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

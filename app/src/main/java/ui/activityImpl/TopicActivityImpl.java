@@ -9,7 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import com.example.myapplication.R;
 
@@ -24,8 +24,8 @@ import ui.activity.TopicActivity;
 public class TopicActivityImpl extends AppCompatActivity implements TopicActivity {
 
     private TopicAdapter topicAdapter;
-    private ListView lvTopic;
-
+//    private ListView lvTopic;
+    private GridView lvTopic;
     private TopicPresenter topicPresenter;
 
     @Override
