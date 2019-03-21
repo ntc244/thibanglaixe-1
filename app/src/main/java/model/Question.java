@@ -15,6 +15,8 @@ public class Question extends BaseModel implements Serializable {
     private String content;
     @SerializedName("dap_an")
     private List<Answer> dapAn;
+    @SerializedName("hinh_anh")
+    private String image;
 
     public Question() {
     }
@@ -47,5 +49,13 @@ public class Question extends BaseModel implements Serializable {
 
     public void setDapAn(List<Answer> dapAn) {
         this.dapAn = dapAn;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

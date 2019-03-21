@@ -54,10 +54,8 @@ public class QuestionAdapter extends ArrayAdapter<Question> {
         view = inflater.inflate(this.resource, null);
 
         // Đặt chữ cho từng view trong danh sách.
-        TextView txtContent = (TextView) view.findViewById(R.id.checkRight);
+        TextView txtContent = (TextView) view.findViewById(R.id.chkDapAn);
         txtContent.setText(question.get(position).getContent());
-        TextView txtMulct = (TextView) view.findViewById(R.id.txtMulct);
-//        txtMulct.setText(question.get(position).getMulct());
 
 
         // Trả về view kết quả.

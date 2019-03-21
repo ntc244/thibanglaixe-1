@@ -30,6 +30,7 @@
         android:layout_height="160dp"
         android:layout_gravity="center" />
 
+
     <ListView
         android:id="@+id/lv_DapAn"
         android:layout_width="match_parent"

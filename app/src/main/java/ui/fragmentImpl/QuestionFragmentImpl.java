@@ -3,6 +3,7 @@ package ui.fragmentImpl;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,6 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,6 +25,7 @@ import adapter.AnswerAdapter;
 import model.Answer;
 import model.Question;
 import ui.fragment.QuestionFragment;
+import utils.CustomPicasso;
 
 public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
 
@@ -132,9 +133,12 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
 
         //Hiển thị hoặc ẩn ảnh biển báo/sa hình
         if (task.equals("sa_hinh")) {
-            Picasso.with(QuestionFragmentImpl.this.getContext()).load("http://songmoi.vn/public/upload_editor/posts/images/angry-husky-christmas-6.jpg")
-                    .placeholder(R.mipmap.ic_launcher)
-                    .error(R.mipmap.ic_launcher)
+            //http://songmoi.vn/public/upload_editor/posts/images/angry-husky-christmas-6.jpg
+            //https://songchung.vn/API_giaothong/image/b1.jpg
+            /*Picasso.with(QuestionFragmentImpl.this.getContext())
+                    .load("https://songchung.vn/API_giaothong/image/b1.jpg")
+                    .placeholder(R.mipmap.loader)
+                    .error(R.mipmap.error)
                     .into(imgHinhCauHoi, new Callback() {
                         @Override
                         public void onSuccess() {
@@ -144,6 +148,23 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
                         @Override
                         public void onError() {
 
+                        }
+                    });*/
+
+
+            CustomPicasso.with(QuestionFragmentImpl.this.getContext())
+                    .load("https://songchung.vn/API_giaothong/image/b1.jpg")
+                    .placeholder(R.mipmap.loader)
+                    .error(R.mipmap.error)
+                    .into(imgHinhCauHoi, new Callback() {
+                        @Override
+                        public void onSuccess() {
+                            Log.d("Success: ", "Success");
+                        }
+
+                        @Override
+                        public void onError() {
+                            Log.d("error: ", "error");
                         }
                     });
         } else {
@@ -238,4 +259,5 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
             Toast.makeText(getContext(), checkedAnswers.get(i) + "", Toast.LENGTH_SHORT).show();
 
     }
+
 }
