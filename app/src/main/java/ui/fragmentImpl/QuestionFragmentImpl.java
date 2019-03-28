@@ -153,7 +153,7 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
 
 
             CustomPicasso.with(QuestionFragmentImpl.this.getContext())
-                    .load("https://songchung.vn/API_giaothong/image/b1.jpg")
+                    .load("https://songchung.vn/API_giaothong/image/" + question.getImage())
                     .placeholder(R.mipmap.loader)
                     .error(R.mipmap.error)
                     .into(imgHinhCauHoi, new Callback() {
