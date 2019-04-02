@@ -14,6 +14,8 @@ public class TrafficSigns extends BaseModel implements Serializable {
     private String id;
     @SerializedName("y_nghia")
     private String content;
+    @SerializedName("hinh_anh")
+    private String image;
 
     public TrafficSigns() {
     }
@@ -37,5 +39,13 @@ public class TrafficSigns extends BaseModel implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

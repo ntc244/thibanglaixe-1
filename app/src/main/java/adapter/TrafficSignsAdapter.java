@@ -2,17 +2,21 @@ package adapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.squareup.picasso.Callback;
 
 import java.util.List;
 
 import model.TrafficSigns;
+import utils.CustomPicasso;
 
 public class TrafficSignsAdapter extends ArrayAdapter<TrafficSigns> {
     private Activity activity;
@@ -54,6 +58,22 @@ public class TrafficSignsAdapter extends ArrayAdapter<TrafficSigns> {
         view = inflater.inflate(this.resource, null);
 
         // Đặt chữ cho từng view trong danh sách.
+        ImageView imgTraffic = (ImageView) view.findViewById(R.id.imgTraffic);
+        CustomPicasso.with(view.getContext())
+                .load("https://songchung.vn/API_giaothong/image/" + trafficSigns.get(position).getImage())
+                .placeholder(R.mipmap.loader)
+                .error(R.mipmap.error)
+                .into(imgTraffic, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        Log.d("Success: ", "Success");
+                    }
+
+                    @Override
+                    public void onError() {
+                        Log.d("error: ", "error");
+                    }
+                });
         TextView txtContent = (TextView) view.findViewById(R.id.txtIdTraffic);
         txtContent.setText(trafficSigns.get(position).getId());
         TextView txtMulct = (TextView) view.findViewById(R.id.txtContentTraffic);

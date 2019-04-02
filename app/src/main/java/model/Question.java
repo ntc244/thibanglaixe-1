@@ -15,7 +15,7 @@ public class Question extends BaseModel implements Serializable {
     private String content;
     @SerializedName("dap_an")
     private List<Answer> dapAn;
-    @SerializedName("hinh_anh")
+    @SerializedName(value = "image", alternate = {"hinh_anh", "HinhBB", "HinhSH"})
     private String image;
 
     public Question() {

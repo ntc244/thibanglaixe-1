@@ -132,26 +132,7 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         // Load list cau hoi
 
         //Hiển thị hoặc ẩn ảnh biển báo/sa hình
-        if (task.equals("sa_hinh")) {
-            //http://songmoi.vn/public/upload_editor/posts/images/angry-husky-christmas-6.jpg
-            //https://songchung.vn/API_giaothong/image/b1.jpg
-            /*Picasso.with(QuestionFragmentImpl.this.getContext())
-                    .load("https://songchung.vn/API_giaothong/image/b1.jpg")
-                    .placeholder(R.mipmap.loader)
-                    .error(R.mipmap.error)
-                    .into(imgHinhCauHoi, new Callback() {
-                        @Override
-                        public void onSuccess() {
-
-                        }
-
-                        @Override
-                        public void onError() {
-
-                        }
-                    });*/
-
-
+        if (question.getImage() != null) {
             CustomPicasso.with(QuestionFragmentImpl.this.getContext())
                     .load("https://songchung.vn/API_giaothong/image/" + question.getImage())
                     .placeholder(R.mipmap.loader)
@@ -170,7 +151,6 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         } else {
             imgHinhCauHoi.setVisibility(View.GONE);
         }
-//        listAnswer.clear();
         txtCauHoi.setText(question.getContent());
 
         // Load list đáp án
