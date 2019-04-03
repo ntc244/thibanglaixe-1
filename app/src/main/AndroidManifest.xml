@@ -13,34 +13,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name="ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!--others activity-->
-        <activity android:name="ui.activityImpl.FinesActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.TrafficSignsActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.ThucHanhActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.SaHinhActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.LyThuyetActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.TopicActivityImpl"
-            android:parentActivityName="ui.MainActivity"/>
-        <activity android:name="ui.activityImpl.TestExamActivityImpl"
-            android:parentActivityName="ui.activityImpl.TopicActivityImpl"/>
-        <activity android:name="ui.activityImpl.ResultTestExamActivityImpl"
-            />
-
+        </activity> <!-- others activity -->
+        <activity
+            android:name="ui.activityImpl.FinesActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.ExamPrincipleActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.TrafficSignsActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.ThucHanhActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.SaHinhActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.LyThuyetActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.TopicActivityImpl"
+            android:parentActivityName="ui.MainActivity" />
+        <activity
+            android:name="ui.activityImpl.TestExamActivityImpl"
+            android:parentActivityName="ui.activityImpl.TopicActivityImpl" />
+        <activity android:name="ui.activityImpl.ResultTestExamActivityImpl" />
     </application>
 
 </manifest>

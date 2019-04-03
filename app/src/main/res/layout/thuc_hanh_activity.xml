@@ -28,13 +28,13 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <include layout="@layout/tab1_layout"/>
+                    <include layout="@layout/exam_principle_tab1_fragment"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
-                    <include layout="@layout/tab2_layout"/>
+                    <include layout="@layout/exam_principle_tab2_fragment"/>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

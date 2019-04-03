@@ -5,37 +5,37 @@ import android.util.Log;
 import java.io.IOException;
 import java.util.List;
 
-import api.TrafficSignsAPI;
-import model.TrafficSigns;
+import api.ExamPrincipleAPI;
+import model.ExamPrinciple;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import service.TrafficSignsService;
+import service.ExamPrincipleService;
 import serviceCallback.ListDataCallback;
 import utils.Constant;
 import utils.RetrofitRequest;
 
-public class TrafficSignsServiceImpl implements TrafficSignsService {
+public class ExamPrincipleServiceImpl implements ExamPrincipleService {
 
-    private static TrafficSignsAPI trafficSignsAPI;
-    private static TrafficSignsService trafficSignsService;
+    private static ExamPrincipleAPI trafficSignsAPI;
+    private static ExamPrincipleService trafficSignsService;
 
-    public TrafficSignsServiceImpl() {
-        trafficSignsAPI = RetrofitRequest.getInstance().getRetrofit().create(TrafficSignsAPI.class);
+    public ExamPrincipleServiceImpl() {
+        trafficSignsAPI = RetrofitRequest.getInstance().getRetrofit().create(ExamPrincipleAPI.class);
     }
 
-    public static TrafficSignsService getInstance() {
+    public static ExamPrincipleService getInstance() {
         if (trafficSignsService == null) {
-            trafficSignsService = new TrafficSignsServiceImpl();
+            trafficSignsService = new ExamPrincipleServiceImpl();
         }
         return trafficSignsService;
     }
 
     @Override
-    public void getListTrafficSigns(final ListDataCallback<TrafficSigns> callback) {
-        trafficSignsAPI.getListTrafficSigns("bien_bao").enqueue(new Callback<List<TrafficSigns>>() {
+    public void getListExamPrinciples(final ListDataCallback<ExamPrinciple> callback) {
+        trafficSignsAPI.getListExamPrinciples("thuc_hanh").enqueue(new Callback<List<ExamPrinciple>>() {
             @Override
-            public void onResponse(Call<List<TrafficSigns>> call, Response<List<TrafficSigns>> response) {
+            public void onResponse(Call<List<ExamPrinciple>> call, Response<List<ExamPrinciple>> response) {
                 if (response.isSuccessful()) {
                     callback.onSuccess(response.body());
                 } else {
@@ -49,7 +49,7 @@ public class TrafficSignsServiceImpl implements TrafficSignsService {
             }
 
             @Override
-            public void onFailure(Call<List<TrafficSigns>> call, Throwable t) {
+            public void onFailure(Call<List<ExamPrinciple>> call, Throwable t) {
                 callback.onFail(Constant.ERROR.CONNECT_ERROR);
                 t.printStackTrace();
             }

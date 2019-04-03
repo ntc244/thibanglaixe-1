@@ -25,18 +25,18 @@ public class ThucHanhActivityImpl extends AppCompatActivity  {
         actionBar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getApplicationContext(),R.color.toolbar2)));
         loadTabs();
 
-        txtKN1=findViewById(R.id.txtKN1);
-        txtKN2=findViewById(R.id.txtKN2);
-        txtKN3=findViewById(R.id.txtKN3);
-        txtKN4=findViewById(R.id.txtKN4);
-        txtKN5=findViewById(R.id.txtKN5);
-
-
-        txtKN1.setText("1. Đầu tiên bạn dừng xe trước vạch xuất phát và chờ hiệu lệnh bắt đầu bài thi. Khi vào trong sa hình vòng số 8 thì lưu ý điều khiển bánh trước chạy áp sát mép ngoài của vòng số 8 khoảng 5 đến 10cm để đảm bảo cho bánh sau được nằm gọn trong vòng số 8. Làm như vậy khi ôm cua bánh xe không bị vượt ra ngoài vòng.");
-        txtKN2.setText("2. Khi ôm cua hãy giữ vững tay lái, loạng choạng hay lắc lư tay rất dễ dẫ đến mất điều khiển xe và cán vạch.");
-        txtKN3.setText("3. Giữa số 2 và số 3, số nào ổn định nhất thì bạn đi. Đừng đi số 1 vì máy sẽ rất bốc nếu lỡ tay quá ga xe sẽ lao ngay ra khỏi vòng. Với số 4 máy quá yếu nên khi đi qua khúc cua, xe không đủ tốc độ làm chết máy và bạn sẽ phải chống chân.");
-        txtKN4.setText("4. Hãy chú ý để chạy đúng hướng vòng số 8 và chạy đủ 1,5 vòng. Có rất nhiều trường hợp bị trượt do chỉ chạy nửa vòng đầu rồi sau đó chạy nhầm hướng. Hoặc chạy chưa đủ vòng mà đã vào lối ra cho bài thi số 2.");
-        txtKN5.setText("5. Nếu các bạn không tập trung được để nhìn hình thì hãy nhớ trong đầu là khi đến cửa thi vòng số 8 thì chạy theo chiều sau: rẽ phải -> rẽ trái -> rẽ phải -> rẽ trái -> rẽ phải. Chạy đủ 5 bước này là kết thúc bài thi vòng số 8 với đủ só lượng 1,5 vòng. Ở lần rẽ phải cuối cùng, bạn sẽ đến bài thi số 2. ");
+//        txtKN1=findViewById(R.id.txtKN1);
+//        txtKN2=findViewById(R.id.txtKN2);
+//        txtKN3=findViewById(R.id.txtKN3);
+//        txtKN4=findViewById(R.id.txtKN4);
+//        txtKN5=findViewById(R.id.txtKN5);
+//
+//
+//        txtKN1.setText("1. Đầu tiên bạn dừng xe trước vạch xuất phát và chờ hiệu lệnh bắt đầu bài thi. Khi vào trong sa hình vòng số 8 thì lưu ý điều khiển bánh trước chạy áp sát mép ngoài của vòng số 8 khoảng 5 đến 10cm để đảm bảo cho bánh sau được nằm gọn trong vòng số 8. Làm như vậy khi ôm cua bánh xe không bị vượt ra ngoài vòng.");
+//        txtKN2.setText("2. Khi ôm cua hãy giữ vững tay lái, loạng choạng hay lắc lư tay rất dễ dẫ đến mất điều khiển xe và cán vạch.");
+//        txtKN3.setText("3. Giữa số 2 và số 3, số nào ổn định nhất thì bạn đi. Đừng đi số 1 vì máy sẽ rất bốc nếu lỡ tay quá ga xe sẽ lao ngay ra khỏi vòng. Với số 4 máy quá yếu nên khi đi qua khúc cua, xe không đủ tốc độ làm chết máy và bạn sẽ phải chống chân.");
+//        txtKN4.setText("4. Hãy chú ý để chạy đúng hướng vòng số 8 và chạy đủ 1,5 vòng. Có rất nhiều trường hợp bị trượt do chỉ chạy nửa vòng đầu rồi sau đó chạy nhầm hướng. Hoặc chạy chưa đủ vòng mà đã vào lối ra cho bài thi số 2.");
+//        txtKN5.setText("5. Nếu các bạn không tập trung được để nhìn hình thì hãy nhớ trong đầu là khi đến cửa thi vòng số 8 thì chạy theo chiều sau: rẽ phải -> rẽ trái -> rẽ phải -> rẽ trái -> rẽ phải. Chạy đủ 5 bước này là kết thúc bài thi vòng số 8 với đủ só lượng 1,5 vòng. Ở lần rẽ phải cuối cùng, bạn sẽ đến bài thi số 2. ");
 
 
     }

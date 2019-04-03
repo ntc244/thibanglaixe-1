@@ -12,10 +12,8 @@ import ui.activity.BaseQuestionActivity;
 public class QuestionPresenterImpl implements QuestionPresenter {
 
 
-//    private QuestionActivityImpl view;
     private BaseQuestionActivity view;
     private QuestionService questionService;
-    private List<Question> questions;
 
     public QuestionPresenterImpl(BaseQuestionActivity view) {
         this.view = view;
@@ -28,8 +26,6 @@ public class QuestionPresenterImpl implements QuestionPresenter {
             @Override
             public void onSuccess(List<Question> data) {
                 view.setListQuestion(data);
-//                QuestionPresenterImpl.this.questions = data;
-//                Log.d("size data in presenter ", String.valueOf(QuestionPresenterImpl.this.questions.size()));
             }
 
             @Override
@@ -37,6 +33,5 @@ public class QuestionPresenterImpl implements QuestionPresenter {
 
             }
         }, task, idDe);
-//        return questions;
     }
 }

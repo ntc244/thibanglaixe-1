@@ -11,10 +11,10 @@ import android.widget.Button;
 
 import com.example.myapplication.R;
 
+import ui.activityImpl.ExamPrincipleActivityImpl;
 import ui.activityImpl.FinesActivityImpl;
 import ui.activityImpl.LyThuyetActivityImpl;
 import ui.activityImpl.SaHinhActivityImpl;
-import ui.activityImpl.ThucHanhActivityImpl;
 import ui.activityImpl.TopicActivityImpl;
 import ui.activityImpl.TrafficSignsActivityImpl;
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         btnThucHanh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ThucHanhActivityImpl.class);
+                Intent intent = new Intent(getBaseContext(), ExamPrincipleActivityImpl.class);
                 startActivity(intent);
             }
         });
