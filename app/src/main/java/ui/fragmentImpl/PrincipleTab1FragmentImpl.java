@@ -5,8 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.Spannable;
-import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
@@ -73,24 +72,24 @@ public class PrincipleTab1FragmentImpl extends Fragment implements PrincipleTabF
 //        String cachCham = fullText.substring(228, 244);
 //        String noiDungCachCham = fullText.substring(244, 498);
 
-        Spannable spannable = new SpannableString(fullText);
-        ForegroundColorSpan fcsBlue = new ForegroundColorSpan(getResources().getColor(R.color.colorPrimaryDark));
-        ForegroundColorSpan fcsBlack = new ForegroundColorSpan(getResources().getColor(R.color.black));
-        RelativeSizeSpan rss15 = new RelativeSizeSpan(0.75f);
-        RelativeSizeSpan rss20 = new RelativeSizeSpan(1f);
-        StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
+        SpannableStringBuilder spannable = new SpannableStringBuilder(fullText);
+        ForegroundColorSpan fcsBlack1 = new ForegroundColorSpan(getResources().getColor(R.color.black));
+        ForegroundColorSpan fcsBlack2 = new ForegroundColorSpan(getResources().getColor(R.color.black));
+        RelativeSizeSpan rss151 = new RelativeSizeSpan(0.75f);
+        RelativeSizeSpan rss152 = new RelativeSizeSpan(0.75f);
+        StyleSpan boldSpan1 = new StyleSpan(Typeface.BOLD);
+        StyleSpan boldSpan2 = new StyleSpan(Typeface.BOLD);
 
-        spannable.setSpan(boldSpan, 0, 8, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(fcsBlack, 8, 228, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(rss20, 0, 8, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(rss15, 8, 228, Spanned.SPAN_COMPOSING);
+        spannable.setSpan(boldSpan1, 0, 8, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(fcsBlack1, 8, 228, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(rss151, 8, 228, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
-        spannable.setSpan(boldSpan, 228, 244, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(fcsBlack, 244, 498, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(rss20, 228, 244, Spanned.SPAN_COMPOSING);
-        spannable.setSpan(rss15, 244, 498, Spanned.SPAN_COMPOSING);
-
+        spannable.setSpan(boldSpan2, 228, 244, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(fcsBlack2, 244, 498, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(rss152, 244, 498, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
         txtExamPrinciple.setText(spannable);
+
+//        txtExamPrinciple.setText(Html.fromHtml("<b>" + luatThi + "</b><br><font color=black>" + noiDungLuatThi + "</font><br>" + "<b>" + cachCham + "</b><br><font color=black>" + noiDungCachCham + "</font><br>"));
     }
 }
