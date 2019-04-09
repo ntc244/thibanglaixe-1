@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -14,34 +16,57 @@
         android:layout_height="wrap_content"
         android:text="Câu "
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtCauHoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Khái niệm đường bộ "
         android:textColor="@color/toolbar2"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMaCauHoi" />
 
     <ImageView
         android:id="@+id/imgHinhCauHoi"
-        android:layout_width="350dp"
-        android:layout_height="160dp"
-        android:layout_gravity="center" />
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCauHoi" />
 
 
     <ListView
         android:id="@+id/lv_DapAn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="399dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgHinhCauHoi" />
 
     <LinearLayout
         android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btn_HienDapAn"
@@ -64,4 +89,4 @@
             android:background="@drawable/hide" />
 
     </LinearLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
