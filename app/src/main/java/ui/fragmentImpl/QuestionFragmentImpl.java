@@ -132,9 +132,41 @@ public class QuestionFragmentImpl extends Fragment implements QuestionFragment {
         // Load list cau hoi
 
         //Hiển thị hoặc ẩn ảnh biển báo/sa hình
-        if (question.getImage() != null) {
+        if (question.getHinhAnh() != null) {
             CustomPicasso.with(QuestionFragmentImpl.this.getContext())
-                    .load("https://songchung.vn/API_giaothong/image/" + question.getImage())
+                    .load("https://songchung.vn/API_giaothong/image/" + question.getHinhAnh())
+                    .placeholder(R.mipmap.loader)
+                    .error(R.mipmap.error)
+                    .into(imgHinhCauHoi, new Callback() {
+                        @Override
+                        public void onSuccess() {
+                            Log.d("Success: ", "Success");
+                        }
+
+                        @Override
+                        public void onError() {
+                            Log.d("error: ", "error");
+                        }
+                    });
+        } else if (question.getHinhBB() != null) {
+            CustomPicasso.with(QuestionFragmentImpl.this.getContext())
+                    .load("https://songchung.vn/API_giaothong/image/" + question.getHinhBB())
+                    .placeholder(R.mipmap.loader)
+                    .error(R.mipmap.error)
+                    .into(imgHinhCauHoi, new Callback() {
+                        @Override
+                        public void onSuccess() {
+                            Log.d("Success: ", "Success");
+                        }
+
+                        @Override
+                        public void onError() {
+                            Log.d("error: ", "error");
+                        }
+                    });
+        } else if (question.getHinhSH() != null) {
+            CustomPicasso.with(QuestionFragmentImpl.this.getContext())
+                    .load("https://songchung.vn/API_giaothong/image/" + question.getHinhSH())
                     .placeholder(R.mipmap.loader)
                     .error(R.mipmap.error)
                     .into(imgHinhCauHoi, new Callback() {

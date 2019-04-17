@@ -15,8 +15,12 @@ public class Question extends BaseModel implements Serializable {
     private String content;
     @SerializedName("dap_an")
     private List<Answer> dapAn;
-    @SerializedName(value = "image", alternate = {"hinh_anh", "HinhBB", "HinhSH"})
-    private String image;
+    @SerializedName("hinh_anh")
+    private String hinhAnh;
+    @SerializedName("HinhBB")
+    private String hinhBB;
+    @SerializedName("HinhSH")
+    private String hinhSH;
 
     public Question() {
     }
@@ -51,11 +55,35 @@ public class Question extends BaseModel implements Serializable {
         this.dapAn = dapAn;
     }
 
-    public String getImage() {
-        return image;
+//    public String getImage() {
+//        return image;
+//    }
+//
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
+
+    public String getHinhAnh() {
+        return hinhAnh;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setHinhAnh(String hinhAnh) {
+        this.hinhAnh = hinhAnh;
+    }
+
+    public String getHinhBB() {
+        return hinhBB;
+    }
+
+    public void setHinhBB(String hinhBB) {
+        this.hinhBB = hinhBB;
+    }
+
+    public String getHinhSH() {
+        return hinhSH;
+    }
+
+    public void setHinhSH(String hinhSH) {
+        this.hinhSH = hinhSH;
     }
 }
