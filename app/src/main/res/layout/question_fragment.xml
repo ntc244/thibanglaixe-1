@@ -51,8 +51,10 @@
     <ListView
         android:id="@+id/lv_DapAn"
         android:layout_width="match_parent"
-        android:layout_height="399dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgHinhCauHoi" />
