@@ -9,12 +9,20 @@
     android:orientation="vertical"
     tools:context="ui.MainActivity">
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Ôn thi giấy phép A1"
+        android:drawablePadding="10dp"
+        android:textSize="40dp"
+        android:textColor="@color/green"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="105dp"
         >
 
         <Button

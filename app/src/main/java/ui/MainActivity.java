@@ -36,9 +36,13 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Lý thuyết bằng lái xe A1");
         actionBar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getApplicationContext(),R.color.toolbar2)));
         btnFines = findViewById(R.id.btnFines);
-        btnThiThu = findViewById(R.id.btnThithu);
+       btnThiThu = findViewById(R.id.btnThithu);
         btnLyThuyet = findViewById(R.id.btnLythuyet);
         btnHocSaHinh = findViewById(R.id.btnHocSaHinh);
+
+        //ô mới khởi tạo nhưng chưa new đối tượng thì nó đang ở trạng thái null
+//        , cái /find này như kiểu new đối tượng ấy, bọn ô bc rồi nhỉ, cho xin ít kinh nghiệm đi :))
+        //chắc do mạng
         btnHocBienBao = findViewById(R.id.btnHocBienBao);
         btnThucHanh = findViewById(R.id.btnThuchanh);
 
@@ -65,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btnHocSaHinh.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), SaHinhActivityImpl.class);
                 startActivity(intent);
